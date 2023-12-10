@@ -28,10 +28,8 @@ public class Main {
         //3. В переменной number, лежит целое число 10500. В переменной result посчитайте следующее
         //выражение: (number / 10) / 10. Результат выведите на консоль.
         int number = 10500;
-        //Вариант 1: использован тип int, т.к. результат - целое число
-        int result3 = (number / 10) / 10;
-        //Вариант 2: использован тип double ради универсальности
-        //double result3 = (number / 10.0) / 10;
+        //Использован тип double ради универсальности
+        double result3 = (number / 10.0) / 10;
         System.out.println("(number / 10) / 10 = " + result3 + "\t //для number = " + number);
 
         System.out.println();
