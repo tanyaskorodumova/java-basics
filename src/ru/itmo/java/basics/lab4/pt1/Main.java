@@ -19,6 +19,8 @@ public class Main {
 
         //Создание массива для заданий 5 и 6
         int[] array = {3, -3, 7, 4, 5, 4, 3};
+        //Либо заполнение случайными значениями
+        //int[] array = ru.itmo.java.basics.lab4.pt2.Main.getRandArray(10, 50);
         System.out.println(Arrays.toString(array));
         //Вызов метода для задания 5
         System.out.println("3 является первым и последним числом массива: " + isFirstAndLast(array, 3));
@@ -44,15 +46,11 @@ public class Main {
         String divisibleByBoth = "Делится на " + divisor1 + " и " + divisor2 + ": ";
         for (int i = min; i <= max; i++) {
             if (i % divisor1 == 0) {
-                divisibleByDiv1 += i + " "; //Закомментить, если делим строго на 3 группы (убираем пересечения)
+                divisibleByDiv1 += i + " ";
                 if (i % divisor2 == 0) {
                     divisibleByBoth += i + " ";
-                    divisibleByDiv2 += i + " "; //Закомментить, если делим строго на 3 группы (убираем пересечения)
+                    divisibleByDiv2 += i + " ";
                 }
-                //Раскомменить, если делим строго на 3 группы (убираем пересечения)
-                //else {
-                //    divisibleByDiv1 += i + " ";
-                //}
             } else if (i % divisor2 == 0) {
                 divisibleByDiv2 += i + " ";
             }
