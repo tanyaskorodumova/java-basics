@@ -79,7 +79,7 @@ public class Main {
     }
 
     //3. Напишите метод, который добавляет 1млн элементов в ArrayList и LinkedList
-    public static List getBigRandList(int size, String listType, int maxVal) {
+    public static List<Integer> getBigRandList(int size, String listType, int maxVal) {
         List<Integer> result;
 
         switch (listType) {
@@ -117,7 +117,7 @@ public class Main {
         return lastItem;
     }
 
-    public static List getRandIntList(int maxSize, int maxVal) {
+    public static List<Integer> getRandIntList(int maxSize, int maxVal) {
         List<Integer> result = new ArrayList<>();
         int[] randArray = getRandArray(maxSize, maxVal);
 
