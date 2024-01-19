@@ -13,18 +13,19 @@ public class Task3 {
         Counter counter = new Counter();
         for (int i = 0; i < threadsCount; i++) {
             Thread thread = new Thread(() -> {
+                synchronized (counter) {
                 for (int j = 0; j < times; j++) {
-                    synchronized (counter) {
                         counter.increment();
                     }
                 }
+                System.out.println(counter.getCount());
             });
             thread.start();
         }
 
         //Ждем завершения всех созданных потоков
-        joinAllThreads();
+        //joinAllThreads();
 
-        System.out.println("count after operations: " + counter.getCount());
+        //System.out.println("count after operations: " + counter.getCount());
     }
 }
